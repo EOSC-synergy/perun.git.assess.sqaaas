@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/CESNET/perun:
+      branch: master
+      repo: https://github.com/CESNET/perun.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/CESNET/perun git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-crimson-crocodile.sh
+        container: qc.acc_cheeky-vermilion-tzu
+  QC.Doc:
+    repos:
+      github.com/CESNET/perun find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-olivine-wolverine.sh
+        container: qc.doc_trippy-ultramarine-booby
+      github.com/CESNET/perun git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-salmon-cockroach.sh
+        container: qc.doc_foggy-asparagus-dragonfly
+      github.com/CESNET/perun markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-indigo-octopus.sh
+        container: qc.doc_shabby-violet-grasshopper
+  QC.Lic:
+    repos:
+      github.com/CESNET/perun licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-cream-squid.sh
+        container: qc.lic_surly-magnolia-dragonfly
+  QC.Sec:
+    repos:
+      github.com/CESNET/perun bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-seashell-maltese.sh
+        container: qc.sec_dorky-ruby-dachshund
+  QC.Sty:
+    repos:
+      github.com/CESNET/perun checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-brass-snake.sh
+        container: qc.sty_slimy-alizarin-frog
+      github.com/CESNET/perun flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-burgundy-chinook.sh
+        container: qc.sty_cloudy-viridian-monster
+      github.com/CESNET/perun jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-mustard-woodpecker.sh
+        container: qc.sty_frumpy-peach-flamingo
+  QC.Ver:
+    repos:
+      github.com/CESNET/perun get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-auburn-fox.sh
+        container: qc.ver_cranky-tomato-mongoose
+timeout: 5400
