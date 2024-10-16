@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/CESNET/perun:
-      branch: master
+      branch: main
       repo: https://github.com/CESNET/perun.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.9
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,52 +15,62 @@ sqa_criteria:
     repos:
       github.com/CESNET/perun git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-crimson-crocodile.sh
-        container: qc.acc_cheeky-vermilion-tzu
+        - /usr/bin/env sh .sqa/script.tacky-olive-lizard.sh
+        container: qc.acc_zippy-razzmatazz-newt
   QC.Doc:
     repos:
       github.com/CESNET/perun find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-olivine-wolverine.sh
-        container: qc.doc_trippy-ultramarine-booby
+        - /usr/bin/env sh .sqa/script.leaky-teal-bison.sh
+        container: qc.doc_gamy-crimson-rottweiler
       github.com/CESNET/perun git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-salmon-cockroach.sh
-        container: qc.doc_foggy-asparagus-dragonfly
+        - /usr/bin/env sh .sqa/script.stealthy-lilac-bracke.sh
+        container: qc.doc_flimsy-amaranth-bobcat
       github.com/CESNET/perun markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-indigo-octopus.sh
-        container: qc.doc_shabby-violet-grasshopper
+        - /usr/bin/env sh .sqa/script.muggy-platinum-wrasse.sh
+        container: qc.doc_wheezy-olive-cow
   QC.Lic:
     repos:
       github.com/CESNET/perun licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-cream-squid.sh
-        container: qc.lic_surly-magnolia-dragonfly
+        - /usr/bin/env sh .sqa/script.sleazy-tangerine-tzu.sh
+        container: qc.lic_sleepy-apricot-donkey
   QC.Sec:
     repos:
       github.com/CESNET/perun bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-seashell-maltese.sh
-        container: qc.sec_dorky-ruby-dachshund
+        - /usr/bin/env sh .sqa/script.lovely-orchid-civet.sh
+        container: qc.sec_leaky-cerise-antelope
   QC.Sty:
     repos:
       github.com/CESNET/perun checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-brass-snake.sh
-        container: qc.sty_slimy-alizarin-frog
+        - /usr/bin/env sh .sqa/script.zippy-lime-rattlesnake.sh
+        container: qc.sty_ugly-champagne-whippet
       github.com/CESNET/perun flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-burgundy-chinook.sh
-        container: qc.sty_cloudy-viridian-monster
+        - /usr/bin/env sh .sqa/script.dorky-cream-bombay.sh
+        container: qc.sty_bumpy-red-worm
+      github.com/CESNET/perun hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-emerald-coral.sh
+        container: qc.sty_lumpy-peach-bandicoot
       github.com/CESNET/perun jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-mustard-woodpecker.sh
-        container: qc.sty_frumpy-peach-flamingo
+        - /usr/bin/env sh .sqa/script.flabby-lemon-hound.sh
+        container: qc.sty_skinny-silver-frise
+  QC.Uni:
+    repos:
+      github.com/CESNET/perun pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-cerulean-birman.sh
+        container: qc.uni_shaky-corn-tamarin
   QC.Ver:
     repos:
       github.com/CESNET/perun get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-auburn-fox.sh
-        container: qc.ver_cranky-tomato-mongoose
+        - /usr/bin/env sh .sqa/script.grumpy-denim-emu.sh
+        container: qc.ver_clammy-amethyst-fish
 timeout: 5400
