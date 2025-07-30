@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CESNET/perun &&
-    licensee detect . --confidence 60 --json 
+cd gitlab.ics.muni.cz/perun/perun-idm/perun &&
+    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
 )

@@ -1,76 +1,76 @@
 config:
   credentials: []
   project_repos:
-    github.com/CESNET/perun:
-      branch: main
-      repo: https://github.com/CESNET/perun.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.2.1
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.ics.muni.cz/perun/perun-idm/perun:
+      branch: main
+      repo: https://gitlab.ics.muni.cz/perun/perun-idm/perun.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/CESNET/perun git:
+      gitlab.ics.muni.cz/perun/perun-idm/perun git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-olive-lizard.sh
-        container: qc.acc_zippy-razzmatazz-newt
+        - /usr/bin/env sh .sqa/script.beady-jade-lobster.sh
+        container: qc.acc_skinny-sapphire-jellyfish
   QC.Doc:
     repos:
-      github.com/CESNET/perun find_doc_files.py:
+      gitlab.ics.muni.cz/perun/perun-idm/perun find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-teal-bison.sh
-        container: qc.doc_gamy-crimson-rottweiler
-      github.com/CESNET/perun git:
+        - /usr/bin/env sh .sqa/script.skinny-seashell-owl.sh
+        container: qc.doc_gimpy-champagne-weasel
+      gitlab.ics.muni.cz/perun/perun-idm/perun git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-lilac-bracke.sh
-        container: qc.doc_flimsy-amaranth-bobcat
-      github.com/CESNET/perun markdownlint:
+        - /usr/bin/env sh .sqa/script.geeky-bistre-centipede.sh
+        container: qc.doc_gloppy-lavender-crab
+      gitlab.ics.muni.cz/perun/perun-idm/perun markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-platinum-wrasse.sh
-        container: qc.doc_wheezy-olive-cow
+        - /usr/bin/env sh .sqa/script.chewy-peach-wolverine.sh
+        container: qc.doc_foggy-lavender-impala
   QC.Lic:
     repos:
-      github.com/CESNET/perun licensee:
+      gitlab.ics.muni.cz/perun/perun-idm/perun licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-tangerine-tzu.sh
-        container: qc.lic_sleepy-apricot-donkey
+        - /usr/bin/env sh .sqa/script.stuffy-copper-bordeaux.sh
+        container: qc.lic_stuffy-amethyst-wildebeest
   QC.Sec:
     repos:
-      github.com/CESNET/perun bandit:
+      gitlab.ics.muni.cz/perun/perun-idm/perun bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-orchid-civet.sh
-        container: qc.sec_leaky-cerise-antelope
+        - /usr/bin/env sh .sqa/script.scaly-magenta-barb.sh
+        container: qc.sec_flimsy-buff-stoat
   QC.Sty:
     repos:
-      github.com/CESNET/perun checkstyle:
+      gitlab.ics.muni.cz/perun/perun-idm/perun checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-lime-rattlesnake.sh
-        container: qc.sty_ugly-champagne-whippet
-      github.com/CESNET/perun flake8:
+        - /usr/bin/env sh .sqa/script.scummy-asparagus-bracke.sh
+        container: qc.sty_cozy-crimson-hedgehog
+      gitlab.ics.muni.cz/perun/perun-idm/perun flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-cream-bombay.sh
-        container: qc.sty_bumpy-red-worm
-      github.com/CESNET/perun hadolint:
+        - /usr/bin/env sh .sqa/script.cranky-asparagus-eleuth.sh
+        container: qc.sty_trippy-peach-fish
+      gitlab.ics.muni.cz/perun/perun-idm/perun hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-emerald-coral.sh
-        container: qc.sty_lumpy-peach-bandicoot
-      github.com/CESNET/perun jsonlint:
+        - /usr/bin/env sh .sqa/script.snappy-burgundy-quail.sh
+        container: qc.sty_sloppy-lime-gharial
+      gitlab.ics.muni.cz/perun/perun-idm/perun jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-lemon-hound.sh
-        container: qc.sty_skinny-silver-frise
+        - /usr/bin/env sh .sqa/script.frumpy-azure-chinchilla.sh
+        container: qc.sty_surly-teal-hare
   QC.Uni:
     repos:
-      github.com/CESNET/perun pytest:
+      gitlab.ics.muni.cz/perun/perun-idm/perun pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cerulean-birman.sh
-        container: qc.uni_shaky-corn-tamarin
+        - /usr/bin/env sh .sqa/script.smelly-periwinkle-magpie.sh
+        container: qc.uni_grumpy-azure-gorilla
   QC.Ver:
     repos:
-      github.com/CESNET/perun get_git_tags.py:
+      gitlab.ics.muni.cz/perun/perun-idm/perun get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-denim-emu.sh
-        container: qc.ver_clammy-amethyst-fish
+        - /usr/bin/env sh .sqa/script.lumpy-silver-mongoose.sh
+        container: qc.ver_sleazy-green-squirrel
 timeout: 5400

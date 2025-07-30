@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CESNET/perun &&
-    mdl --json  .
+cd gitlab.ics.muni.cz/perun/perun-idm/perun &&
+    hadolint perun-base/src/test/resources/Dockerfile --failure-threshold error
 )

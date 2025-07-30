@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CESNET/perun &&
-    jsonlint-cli "**/*.json"
+cd gitlab.ics.muni.cz/perun/perun-idm/perun &&
+    mdl --json  .
 )

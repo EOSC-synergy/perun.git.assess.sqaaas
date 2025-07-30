@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CESNET/perun &&
-    find_doc_files.py --file_type all
+cd gitlab.ics.muni.cz/perun/perun-idm/perun &&
+    pytest  --json-report  --json-report-indent 4
 )

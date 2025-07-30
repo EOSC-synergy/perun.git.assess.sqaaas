@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CESNET/perun &&
-    git rev-parse --is-inside-work-tree 
+cd gitlab.ics.muni.cz/perun/perun-idm/perun &&
+    get_git_tags.py
 )
